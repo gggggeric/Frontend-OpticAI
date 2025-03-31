@@ -37,7 +37,7 @@ const UserCrudPage = () => {
         e.preventDefault();
         try {
             if (editingUser) {
-                await axios.put(`http://localhost:5001/admin/users/${editingUser._id}`, formData);
+                await axios.put(`https://opticai.onrender.com/admin/users/${editingUser._id}`, formData);
                 toast.success("User updated successfully!", {
                     position: "bottom-right",
                     autoClose: 3000,
@@ -48,7 +48,7 @@ const UserCrudPage = () => {
                     theme: "colored",
                 });
             } else {
-                await axios.post("http://localhost:5001/admin/users", formData);
+                await axios.post("https://opticai.onrender.com/admin/users", formData);
                 toast.success("User added successfully!", {
                     position: "bottom-right",
                     autoClose: 3000,
@@ -88,7 +88,7 @@ const UserCrudPage = () => {
     const handleDelete = async (id) => {
         if (window.confirm("Are you sure you want to delete this user?")) {
             try {
-                await axios.delete(`http://localhost:5001/admin/users/${id}`);
+                await axios.delete(`https://opticai.onrender.com/admin/users/${id}`);
                 fetchUsers(); // Re-fetch the user list after deletion
                 toast.success("User deleted successfully!", {
                     position: "bottom-right",

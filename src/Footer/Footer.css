@@ -1,0 +1,126 @@
+.footer {
+    background-color: #2a2250;
+    color: #fff;
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: auto; /* Ensures footer sticks to the bottom */
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1.5rem; /* Reduced gap for compactness */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  /* Review Section (Left Side) */
+  .footer-review {
+    flex: 1;
+    max-width: 400px; /* Reduced max-width for compactness */
+    text-align: left;
+  }
+  
+  .footer-review h3 {
+    font-size: 1.25rem; /* Smaller font size */
+    margin-bottom: 0.75rem; /* Reduced margin */
+    color: #D8BFD8; /* Accent color for the heading */
+  }
+  
+  .review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .review-textbox {
+    width: 100%;
+    padding: 0.5rem; /* Reduced padding */
+    border-radius: 6px; /* Slightly smaller border radius */
+    border: 1px solid #ccc;
+    font-size: 0.9rem; /* Smaller font size */
+    resize: vertical; /* Allow vertical resizing */
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .review-textbox::placeholder {
+    color: #999;
+  }
+  
+  .review-button {
+    background-color: #ff6f61; /* Accent color for the button */
+    color: #fff;
+    padding: 0.5rem 1rem; /* Reduced padding */
+    border: none;
+    border-radius: 6px; /* Slightly smaller border radius */
+    font-size: 0.9rem; /* Smaller font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .review-button:hover {
+    background-color: #e65a50; /* Darker shade for hover */
+  }
+  
+  /* Footer Links and Social Icons (Right Side) */
+  .footer-right {
+    flex: 1;
+    max-width: 300px; /* Reduced max-width for compactness */
+    text-align: left;
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Reduced gap */
+    margin-bottom: 1rem; /* Reduced margin */
+  }
+  
+  .footer-links a,
+  .footer-links Link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem; /* Smaller font size */
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover,
+  .footer-links Link:hover {
+    color: #D8BFD8; /* Accent color for hover */
+  }
+  
+  .footer-social {
+    display: flex;
+    gap: 1rem; /* Reduced gap */
+  }
+  
+  .footer-social a {
+    color: #fff;
+    font-size: 1.25rem; /* Slightly smaller icons */
+    transition: color 0.3s ease;
+  }
+  
+  .footer-social a:hover {
+    color: #ff6f61; /* Accent color for hover */
+  }
+  
+  /* Copyright Section */
+  .copyright {
+    margin: 0; /* Reset margin */
+    font-size: 0.8rem; /* Smaller font size */
+    color: #ccc;
+    text-align: center; /* Center-align the copyright text */
+    margin-right: 200px;
+  }
+  .admin-message {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    color: #666;
+  }

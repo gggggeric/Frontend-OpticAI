@@ -1,0 +1,315 @@
+/* Navbar */
+.navbar {
+  background: linear-gradient(135deg, #1e1b32, #2a2250); /* Same gradient as sidebar */
+  padding: 10px 20px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25); /* Slightly stronger shadow for depth */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Center Logo */
+.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar-logo {
+  height: 100px; /* Increased height for a bigger logo */
+  margin-right: 8px;
+}
+
+.brand-text {
+  font-size: 20px; /* Retained font size */
+  font-weight: bold;
+  color: #D8BFD8; /* Pastel purple for better contrast */
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  position: relative;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  border-radius: 5px; /* Rounded edges for a more modern look */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -260px;
+  background: linear-gradient(135deg, #1e1b32, #2a2250);
+  padding-top: 80px;
+  transition: left 0.4s ease-in-out, opacity 0.3s ease-in-out;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.3);
+  z-index: 1050;
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.sidebar.active {
+  left: 0;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Sidebar Close Button */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 28px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.close-btn:hover {
+  transform: rotate(90deg);
+}
+
+/* Sidebar Menu */
+.sidebar-menu {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+/* Section Titles */
+.sidebar-section-title {
+  font-size: 14px;  /* Reduced font size */
+  font-weight: bold;
+  color: #D8BFD8; /* Soft pastel purple */
+  padding: 10px 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* More visible border */
+  margin-bottom: 10px;
+}
+
+/* Sidebar Items */
+.sidebar-item {
+  padding: 12px 20px;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar-item::before {
+  content: "";
+  position: absolute;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: left 0.3s ease-in-out;
+}
+
+.sidebar-item:hover::before {
+  left: 0;
+}
+
+.sidebar-item a,
+.sidebar-item button {
+  color: white;
+  text-decoration: none;
+  font-size: 14px; /* Smaller font size */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  text-align: left;
+  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.sidebar-item:hover a,
+.sidebar-item:hover button {
+  color: #D8BFD8; /* Light pastel purple */
+  transform: translateX(10px);
+  text-shadow: 0 0 8px rgba(216, 191, 216, 0.3); /* Soft glow effect */
+}
+
+/* Section Separators */
+.sidebar-separator {
+  width: 80%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3); /* Lighter separator */
+  margin: 10px auto;
+}
+/* Sidebar Logout Button */
+.sidebar-item.logout {
+  padding: 12px 20px; /* Same padding as other items */
+  display: flex;
+  align-items: center; /* Align icon and text vertically */
+  gap: 10px; /* Space between icon and text */
+  margin-top: 0; /* Remove unnecessary spacing */
+}
+/* Sidebar Logout Button */
+/* Sidebar Logout Button */
+.sidebar-item.logout {
+  padding: 12px 20px; /* Same padding as Edit Profile */
+  display: flex;
+  align-items: center; /* Align icon and text vertically */
+  gap: 10px; /* Space between icon and text */
+  margin-top: 0; /* Remove unnecessary spacing */
+}
+
+/* Sidebar Logout Button */
+.sidebar-item.logout {
+  padding: 12px 20px; /* Same padding as other items */
+  display: flex;
+  align-items: center; /* Align icon and text vertically */
+  gap: 10px; /* Space between icon and text */
+  margin: 0; /* Remove any extra margin */
+  width: 100%; /* Full width */
+}
+
+.sidebar-item.logout button {
+  color: red; /* Red text and icon */
+  font-weight: bold;
+  background: none;
+  border: none;
+  font-size: 14px; /* Same font size as Edit Profile */
+  cursor: pointer;
+  width: 100%; /* Full width */
+  text-align: left; /* Align text to the left */
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between icon and text */
+  padding: 0; /* Remove any extra padding */
+  border-radius: 8px; /* Rounded corners */
+  box-sizing: border-box; /* Ensures padding doesn't break layout */
+  transition: none; /* Remove transition for hover */
+}
+
+/* Ensure the icon is also red */
+.sidebar-item.logout button .sidebar-icon {
+  color: red; /* Red icon */
+}
+
+/* Remove hover effect */
+.sidebar-item.logout button:hover {
+  background-color: transparent; /* No background on hover */
+  color: red; /* Keep text red on hover */
+  border: 1px solid transparent; /* No border on hover */
+}
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1049;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.sidebar.active + .overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Profile Section */
+.sidebar-profile {
+  text-align: center;
+  padding: 20px;
+}
+
+.sidebar-profile-img {
+  width: 60px;  /* Adjusted profile image size */
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.sidebar-profile-email {
+  margin-top: 10px;
+  color: #fff;
+  font-size: 12px;  /* Reduced font size */
+  font-weight: 500;
+}
+.nav-item .nav-link {
+  position: relative;
+  color: #ddd;
+  text-decoration: none;
+  padding-bottom: 5px;
+  margin: 0 15px;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Subtle Centered Underline for Active Link */
+.nav-item.active .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* Centers the underline */
+  width: 40%; /* Smaller underline */
+  bottom: 0;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 2px; /* Slight round edges for smoothness */
+  transition: width 0.3s ease-in-out;
+}
+
+/* Hover Effect (Optional) */
+.nav-item .nav-link:hover::after {
+  width: 60%; /* Slight expansion on hover for emphasis */
+}
+
+.sidebar-profile-name {
+  color: #ffffff;
+}
+.gif-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+  backdrop-filter: blur(5px); /* Apply a subtle blur effect */
+  border-radius: 10px; /* Rounded corners */
+  padding: 10px; /* Add some padding */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.gif-container img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px; /* Rounded corners for the GIF */
+}
+
+.gif-container p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #000; /* Dark text for better readability */
+  font-weight: 500; /* Slightly bold text */
+}

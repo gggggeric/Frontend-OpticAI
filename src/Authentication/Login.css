@@ -1,0 +1,240 @@
+/* Wrapper for the login container */
+.auth-page-wrapper {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f8ff; /* Optional: Add a background color */
+  padding-top: 1px; /* Adjust this value to match your navbar height */
+}
+
+/* Centering the Login Container */
+.login-container {
+  display: flex;
+  width: 900px;
+  max-width: 90%; /* Adjusted for better responsiveness */
+  min-height: 550px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+  background: white;
+  border: 2px solid #6a5acd;
+  position: relative; /* Changed from absolute */
+  margin: 0 auto; /* Center horizontally */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Left Side */
+.login-container .auth-left-side {
+  flex: 1;
+  background: linear-gradient(135deg, #352e4b, #6a5acd);
+  color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: inset -5px 0px 10px rgba(0, 0, 0, 0.2);
+  border-right: 3px solid #6a5acd;
+}
+
+.login-container  {
+  font-size: 30px;
+  font-weight: 700;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.login-container  {
+  font-size: 16px;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+/* Right Side */
+.login-container .right-side {
+  flex: 1;
+  background: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: inset 5px 0px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Login Title */
+.login-container .login-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #352e4b;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #6a5acd;
+}
+
+.login-container .login-subtext {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+/* Error Message */
+.login-container .error-message {
+  background: #ffebeb;
+  color: #d32f2f;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+/* Input Fields */
+.login-container .input-group {
+  margin-bottom: 15px;
+}
+
+.login-container .input-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #352e4b;
+  margin-bottom: 5px;
+}
+
+.login-container .input-group input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #6a5acd;
+  border-radius: 6px;
+  background: #f8f8ff;
+  transition: 0.3s ease-in-out;
+}
+
+.login-container .input-group input:focus {
+  border-color: #483d8b;
+  box-shadow: 0px 0px 8px rgba(72, 61, 139, 0.4);
+  background: white;
+}
+
+/* Gender Dropdown */
+.login-container .input-group .gender-dropdown {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #6a5acd;
+  border-radius: 6px;
+  background: #f8f8ff;
+  color: #352e4b;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.login-container .input-group .gender-dropdown:focus {
+  border-color: #483d8b;
+  box-shadow: 0px 0px 8px rgba(72, 61, 139, 0.4);
+  background: white;
+}
+
+.login-container .input-group .gender-dropdown option {
+  color: #352e4b;
+  background: #fff;
+}
+
+.login-container .input-group .gender-dropdown option:disabled {
+  color: #aaa; /* Light gray for the disabled option */
+}
+
+/* Remember Me */
+.login-container .remember-me {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.login-container .remember-me input {
+  margin-right: 10px;
+}
+
+/* Login Button */
+.login-container .login-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  background: linear-gradient(135deg, #352e4b, #6a5acd);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  margin-top: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.login-container .login-btn:hover {
+  background: linear-gradient(135deg, #2a2540, #5a4fcf);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Extra Links */
+.login-container .extra-links {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.login-container .signup-link {
+  color: #352e4b;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+.login-container .signup-link:hover {
+  text-decoration: underline;
+  color: #6a5acd;
+}
+
+.login-container .forgot-password-link {
+  display: block;
+  margin-top: 10px;
+  color: #777;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+.login-container .forgot-password-link:hover {
+  text-decoration: underline;
+  color: #6a5acd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    height: auto;
+    border: 2px solid #6a5acd;
+  }
+
+  .login-container .left-side {
+    width: 100%;
+    padding: 30px;
+    border-bottom: 3px solid #6a5acd;
+    border-right: none;
+  }
+
+  .login-container .right-side {
+    width: 100%;
+    padding: 30px;
+  }
+}
+
+.login-gif {
+  width: 100%;
+  max-width: 400px; /* Adjust size as needed */
+  border-radius: 12px; /* Optional for rounded corners */
+}

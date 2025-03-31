@@ -11,7 +11,7 @@ const ForgotPassword = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5001/auth/forgot-password", {
+      const response = await fetch("https://backend-opticai.onrender.com/auth/forgot-password", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),

@@ -17,7 +17,7 @@ const EmailVerification = () => {
 
     const verifyEmail = async () => {
       try {
-        const response = await fetch(`http://localhost:5001/auth/verify-email?token=${token}`, {
+        const response = await fetch(`https://backend-opticai.onrender.com/auth/verify-email?token=${token}`, {
           method: "GET",
         });
 

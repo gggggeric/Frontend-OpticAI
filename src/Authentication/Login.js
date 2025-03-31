@@ -16,7 +16,7 @@ const LoginPage = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:5001/auth/login", {
+      const response = await axios.post("https://backend-opticai.onrender.com/auth/login", {
         email,
         password,
       });

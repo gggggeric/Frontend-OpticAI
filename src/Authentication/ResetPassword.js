@@ -14,7 +14,7 @@ const ResetPassword = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(`http://localhost:5001/auth/reset-password/${token}`, {
+      const response = await fetch(`https://backend-opticai.onrender.com/auth/reset-password/${token}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ newPassword }),

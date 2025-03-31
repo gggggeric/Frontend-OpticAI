@@ -35,7 +35,7 @@ const SignUpPage = () => {
     const finalGender = gender === 'Other' ? customGender : gender;
 
     try {
-      const response = await axios.post('http://localhost:5001/auth/register', {
+      const response = await axios.post('https://backend-opticai.onrender.com/auth/register', {
         name,
         email,
         password,

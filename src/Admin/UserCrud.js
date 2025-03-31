@@ -18,7 +18,7 @@ const UserCrudPage = () => {
 
     const fetchUsers = async () => {
         try {
-            const response = await axios.get("http://localhost:5001/admin/users");
+            const response = await axios.get("https://opticai.onrender.com/admin/users");
             const usersWithId = response.data.map(user => ({
                 ...user,
                 id: user._id // Adding `id` field to each user object

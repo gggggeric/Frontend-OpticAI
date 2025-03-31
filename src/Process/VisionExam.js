@@ -61,7 +61,7 @@ const VisionExamPage = () => {
         return;
       }
 
-      const response = await axios.get(`http://localhost:5001/test/get-test-results/${userId}`);
+      const response = await axios.get(`https://opticai.onrender.com/test/get-test-results/${userId}`);
       if (response.data.allResults) {
         setAllTestResults(response.data.allResults);
       }
@@ -81,7 +81,7 @@ const VisionExamPage = () => {
         return;
       }
 
-      const response = await axios.post("http://localhost:5001/test/save-test-results", {
+      const response = await axios.post("https://opticai.onrender.com/test/save-test-results", {
         userId,
         testType,
         estimatedEyeGrade,

@@ -12,7 +12,7 @@ const UserActivationPage = () => {
     // Fetch users from the backend
     const fetchUsers = async () => {
       try {
-        const response = await axios.get("http://localhost:5001/admin/manageActive");
+        const response = await axios.get("https://opticai.onrender.com/admin/manageActive");
         setUsers(response.data.users); // Assuming response contains a "users" array
       } catch (error) {
         console.error("Error fetching users:", error);
@@ -26,7 +26,7 @@ const UserActivationPage = () => {
     try {
       const updatedStatus = currentStatus === "Activated" ? "Deactivated" : "Activated"; // Toggle between "Activated" and "Deactivated"
       
-      const response = await axios.put(`http://localhost:5001/admin/user/${userId}/activate`, {
+      const response = await axios.put(`https://opticai.onrender.com/admin/user/${userId}/activate`, {
         isActivate: updatedStatus, // Send the updated activation status
       });
 

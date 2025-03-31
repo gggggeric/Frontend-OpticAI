@@ -51,7 +51,7 @@ const Footer = () => {
       const user = userEmail || `Anonymous#${Math.floor(Math.random() * 10000)}`;
 
       try {
-        const response = await fetch('http://localhost:5001/reviews/submit', {
+        const response = await fetch('https://opticai.onrender.com/reviews/submit', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

@@ -72,7 +72,7 @@ const ColorBlindTest = () => {
 
   const fetchPreviousResult = async () => {
     try {
-      const response = await fetch(`http://localhost:5001/color-blindness/color-blindness-test/${userId}`);
+      const response = await fetch(`https://opticai.onrender.com/color-blindness/color-blindness-test/${userId}`);
       const data = await response.json();
 
       if (response.ok) {
@@ -124,7 +124,7 @@ const ColorBlindTest = () => {
         setOpenModal(true);
         toast.success("Test result received successfully!");
 
-        const nodeResponse = await fetch("http://localhost:5001/color-blindness/color-blindness-test", {
+        const nodeResponse = await fetch("https://opticai.onrender.com/color-blindness/color-blindness-test", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ userId, result: pythonData.result, correctCount: pythonData.correctCount }),
@@ -150,7 +150,7 @@ const ColorBlindTest = () => {
 
   const handleDeleteResult = async () => {
     try {
-      const response = await fetch(`http://localhost:5001/color-blindness/color-blindness-test/${userId}`, {
+      const response = await fetch(`https://opticai.onrender.com/color-blindness/color-blindness-test/${userId}`, {
         method: "DELETE",
       });
 

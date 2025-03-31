@@ -14,7 +14,7 @@ const AdminReviewsPage = () => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await fetch('http://localhost:5001/reviews');
+        const response = await fetch('https://opticai.onrender.com/reviews');
         if (response.ok) {
           const data = await response.json();
           setReviews(data);
@@ -62,7 +62,7 @@ const AdminReviewsPage = () => {
     }
 
     try {
-      const response = await fetch(`http://localhost:5001/reviews/${reviewId}/reply`, {
+      const response = await fetch(`https://opticai.onrender.com/reviews/${reviewId}/reply`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -82,7 +82,7 @@ const AdminReviewsPage = () => {
         });
         setReplyTexts(prev => ({ ...prev, [reviewId]: '' })); // Clear the reply text box for this review
         // Refresh the reviews list
-        const updatedResponse = await fetch('http://localhost:5001/reviews');
+        const updatedResponse = await fetch('https://opticai.onrender.com/reviews');
         if (updatedResponse.ok) {
           const updatedData = await updatedResponse.json();
           setReviews(updatedData);

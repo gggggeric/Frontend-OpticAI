@@ -116,7 +116,7 @@ const FaceShapeDetector = () => {
   
     try {
       // Step 1: Send image to Python server for face shape prediction
-      const predictionResponse = await fetch("https://opticai.onrender.com/predict-face-shape", {
+      const predictionResponse = await fetch("https://backend-opticai.onrender.com/predict-face-shape", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ image }),
@@ -129,7 +129,7 @@ const FaceShapeDetector = () => {
   
       // Step 2: Save the result to the Node.js backend
       const userId = localStorage.getItem("userId"); // Get the logged-in user's ID
-      const saveResponse = await fetch("https://opticai.onrender.com/face-shape/save-face-shape", {
+      const saveResponse = await fetch("https://backend-opticai.onrender.com/face-shape/save-face-shape", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

@@ -27,7 +27,7 @@ const EditProfile = () => {
 
     const fetchUserData = async () => {
       try {
-        const response = await axios.get(`https://opticai.onrender.com/users/users/${userId}`);
+        const response = await axios.get(`https://backend-opticai.onrender.com/users/users/${userId}`);
         const { name, email, address, profile } = response.data;
         setName(name);
         setAddress(address);
@@ -42,7 +42,7 @@ const EditProfile = () => {
 
   const fetchVisionTestResults = async () => {
     try {
-      const response = await axios.get(`https://opticai.onrender.com/test/get-test-results/${userId}`);
+      const response = await axios.get(`https://backend-opticai.onrender.com/test/get-test-results/${userId}`);
       setVisionTestResults(response.data.allResults || []);
       return response.data.allResults || [];
     } catch (error) {
@@ -60,10 +60,10 @@ const EditProfile = () => {
         faceShapeResponse,
         visionTestsResponse
       ] = await Promise.all([
-        axios.get(`https://opticai.onrender.com/users/users/${userId}`),
-        axios.get(`https://opticai.onrender.com/color-blindness/color-blindness-test/${userId}`),
-        axios.get(`https://opticai.onrender.com/astigmatism/astigmatism-test/${userId}`),
-        axios.get(`https://opticai.onrender.com/face-shape/face-shape-history/${userId}`),
+        axios.get(`https://backend-opticai.onrender.com/users/users/${userId}`),
+        axios.get(`https://backend-opticai.onrender.com/color-blindness/color-blindness-test/${userId}`),
+        axios.get(`https://backend-opticai.onrender.com/astigmatism/astigmatism-test/${userId}`),
+        axios.get(`https://backend-opticai.onrender.com//face-shape/face-shape-history/${userId}`),
         fetchVisionTestResults()
       ]);
 
@@ -511,7 +511,7 @@ const EditProfile = () => {
 
     try {
       const response = await axios.put(
-        `https://opticai.onrender.com/users/users/${userId}/uploadProfile`,
+        `https://backend-opticai.onrender.com/users/users/${userId}/uploadProfile`,
         formData,
         {
           headers: {
@@ -556,7 +556,7 @@ const EditProfile = () => {
 
     try {
       const response = await axios.put(
-        `https://opticai.onrender.com/users/users/${userId}`,
+        `https://backend-opticai.onrender.com/users/users/${userId}`,
         dataToUpdate
       );
 

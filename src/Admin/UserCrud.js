@@ -18,7 +18,7 @@ const UserCrudPage = () => {
 
     const fetchUsers = async () => {
         try {
-            const response = await axios.get("https://opticai.onrender.com/admin/users");
+            const response = await axios.get("https://backend-opticai.onrender.com/admin/users");
             const usersWithId = response.data.map(user => ({
                 ...user,
                 id: user._id // Adding `id` field to each user object
@@ -37,7 +37,7 @@ const UserCrudPage = () => {
         e.preventDefault();
         try {
             if (editingUser) {
-                await axios.put(`https://opticai.onrender.com/admin/users/${editingUser._id}`, formData);
+                await axios.put(`https://backend-opticai.onrender.com/admin/users/${editingUser._id}`, formData);
                 toast.success("User updated successfully!", {
                     position: "bottom-right",
                     autoClose: 3000,
@@ -48,7 +48,7 @@ const UserCrudPage = () => {
                     theme: "colored",
                 });
             } else {
-                await axios.post("https://opticai.onrender.com/admin/users", formData);
+                await axios.post("https://backend-opticai.onrender.com/admin/users", formData);
                 toast.success("User added successfully!", {
                     position: "bottom-right",
                     autoClose: 3000,
@@ -88,7 +88,7 @@ const UserCrudPage = () => {
     const handleDelete = async (id) => {
         if (window.confirm("Are you sure you want to delete this user?")) {
             try {
-                await axios.delete(`https://opticai.onrender.com/admin/users/${id}`);
+                await axios.delete(`https://backend-opticai.onrender.com/admin/users/${id}`);
                 fetchUsers(); // Re-fetch the user list after deletion
                 toast.success("User deleted successfully!", {
                     position: "bottom-right",

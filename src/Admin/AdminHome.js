@@ -61,7 +61,7 @@ const AdminHome = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get("https://opticai.onrender.com/admin/userDashboard");
+        const response = await axios.get("https://backend-opticai.onrender.com/admin/userDashboard");
         const userCount = response.data.users.filter((user) => user.userType === "user").length;
         const adminCount = response.data.users.filter((user) => user.userType === "admin").length;
         setUserTypeCount({ users: userCount, admins: adminCount });
@@ -76,7 +76,7 @@ const AdminHome = () => {
 
     const fetchReviews = async () => {
       try {
-        const response = await axios.get("https://opticai.onrender.com/admin/reviewsDashboard");
+        const response = await axios.get("https://backend-opticai.onrender.com/admin/reviewsDashboard");
         setReviewsCount({
           anonymous: response.data.anonymousCount,
           nonAnonymous: response.data.nonAnonymousCount,
@@ -90,7 +90,7 @@ const AdminHome = () => {
 
     const fetchDiagnosisCounts = async () => {
       try {
-        const response = await axios.get("https://opticai.onrender.com/admin/diagnosis-counts");
+        const response = await axios.get("https://backend-opticai.onrender.com/admin/diagnosis-counts");
         // Merge the backend counts with our initialized categories
         setDiagnosisCounts(prev => ({
           ...prev,
@@ -103,7 +103,7 @@ const AdminHome = () => {
 
     const fetchAstigmatismCounts = async () => {
       try {
-        const response = await axios.get("https://opticai.onrender.com/admin/astigmatism-chart");
+        const response = await axios.get("https://backend-opticai.onrender.com/admin/astigmatism-chart");
         setAstigmatismCounts(response.data);
       } catch (error) {
         console.error("Error fetching astigmatism counts:", error);
@@ -112,7 +112,7 @@ const AdminHome = () => {
 
     const fetchColorBlindnessCounts = async () => {
       try {
-        const response = await axios.get("https://opticai.onrender.com/admin/color-blindness-counts");
+        const response = await axios.get("https://backend-opticai.onrender.com/admin/color-blindness-counts");
         setColorBlindnessCounts(response.data);
       } catch (error) {
         console.error("Error fetching color blindness counts:", error);
@@ -121,7 +121,7 @@ const AdminHome = () => {
 
     const fetchGenderData = async () => {
       try {
-        const response = await axios.get("https://opticai.onrender.com/admin/gender-distribution");
+        const response = await axios.get("https://backend-opticai.onrender.com/admin/gender-distribution");
         setGenderData(response.data.data);
       } catch (error) {
         console.error("Error fetching gender data:", error);

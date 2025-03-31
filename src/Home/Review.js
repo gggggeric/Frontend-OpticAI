@@ -10,7 +10,7 @@ const ReviewsPage = () => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await fetch('https://opticai.onrender.com/reviews');
+        const response = await fetch('https://backend-opticai.onrender.com/reviews');
         if (response.ok) {
           const data = await response.json();
           setReviews(data);

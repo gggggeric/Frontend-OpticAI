@@ -42,7 +42,7 @@ const AstigmatismTest = () => {
 
   const fetchPreviousResult = async () => {
     try {
-      const response = await fetch(`https://opticai.onrender.com/astigmatism/astigmatism-test/${userId}`);
+      const response = await fetch(`https://backend-opticai.onrender.com/astigmatism/astigmatism-test/${userId}`);
       const data = await response.json();
 
       if (response.ok) {
@@ -85,7 +85,7 @@ const AstigmatismTest = () => {
       if (pythonResponse.ok) {
         setResult(pythonData.result);
 
-        const nodeResponse = await fetch("https://opticai.onrender.com/astigmatism/astigmatism-test", {
+        const nodeResponse = await fetch("https://backend-opticai.onrender.com/astigmatism/astigmatism-test", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -115,7 +115,7 @@ const AstigmatismTest = () => {
 
   const handleDeleteResult = async () => {
     try {
-      const response = await fetch(`https://opticai.onrender.com/astigmatism-test/${userId}`, {
+      const response = await fetch(`https://backend-opticai.onrender.com/astigmatism-test/${userId}`, {
         method: "DELETE",
       });
 

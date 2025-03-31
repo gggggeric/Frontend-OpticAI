@@ -29,7 +29,7 @@ const Navbar = () => {
         const userId = localStorage.getItem("userId");
         if (userId) {
           try {
-            const response = await fetch(`https://opticai.onrender.com/users/users/${userId}`);
+            const response = await fetch(`https://backend-opticai.onrender.com/users/users/${userId}`);
             const data = await response.json();
             if (data) {
               data.profile = data.profile || defaultProfile;

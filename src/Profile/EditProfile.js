@@ -63,7 +63,7 @@ const EditProfile = () => {
         axios.get(`https://backend-opticai.onrender.com/users/users/${userId}`),
         axios.get(`https://backend-opticai.onrender.com/color-blindness/color-blindness-test/${userId}`),
         axios.get(`https://backend-opticai.onrender.com/astigmatism/astigmatism-test/${userId}`),
-        axios.get(`https://backend-opticai.onrender.com//face-shape/face-shape-history/${userId}`),
+        axios.get(`https://backend-opticai.onrender.com/face-shape/face-shape-history/${userId}`),
         fetchVisionTestResults()
       ]);
 

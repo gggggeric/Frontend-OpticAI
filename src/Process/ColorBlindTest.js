@@ -110,7 +110,7 @@ const ColorBlindTest = () => {
     });
 
     try {
-      const pythonResponse = await fetch("http://127.0.0.1:5000/color-blindness-test", {
+      const pythonResponse = await fetch("https://backend-python-opticai.onrender.com/color-blindness-test", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ answers: userAnswers }),

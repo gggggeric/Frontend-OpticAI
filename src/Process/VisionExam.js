@@ -39,7 +39,7 @@ const VisionExamPage = () => {
 
   // Initialize WebSocket connection
   useEffect(() => {
-    const newSocket = io("http://localhost:5000");
+    const newSocket = io("https://backend-python-opticai.onrender.com");
     setSocket(newSocket);
     return () => newSocket.close();
   }, []);
@@ -235,7 +235,7 @@ const VisionExamPage = () => {
     if (!image) return;
 
     try {
-      const response = await axios.post("http://127.0.0.1:5000/calculate-distance", {
+      const response = await axios.post("https://backend-python-opticai.onrender.com/calculate-distance", {
         image: image.split(",")[1],
       });
 
@@ -292,7 +292,7 @@ const VisionExamPage = () => {
     setCurrentTestType(testType);
 
     try {
-      const endpoint = `http://127.0.0.1:5000/vision-test/${
+      const endpoint = `https://backend-python-opticai.onrender.com/vision-test/${
         testType === "botheyes" ? "both-eyes" : 
         testType === "righteye" ? "right-eye" : "left-eye"
       }`;

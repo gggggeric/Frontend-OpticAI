@@ -72,7 +72,7 @@ const AstigmatismTest = () => {
     }
 
     try {
-      const pythonResponse = await fetch("http://127.0.0.1:5000/astigmatism-test", {
+      const pythonResponse = await fetch("https://backend-python-opticai.onrender.com/astigmatism-test", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
